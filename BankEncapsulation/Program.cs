@@ -35,6 +35,12 @@ public class Program
                 bankAccount.Deposit(deposit);
 
                 Console.WriteLine($"The new balance is: ${bankAccount.GetBalance()}\n");
+                Console.WriteLine("If you would like to make another deposit or withdrawal, press enter. Otherwise please type 'quit'.");
+                if(Console.ReadLine() == "quit")
+                {
+                    break;
+                }
+
             }
             else if (userInput.ToLower() == "b")
             {
@@ -48,6 +54,11 @@ public class Program
                 double withdraw = double.Parse(Console.ReadLine());
                 bankAccount.Withdraw(withdraw);
                 Console.WriteLine($"The new balance is ${bankAccount.GetBalance()}\n");
+                Console.WriteLine("If you would like to make another deposit or withdrawal, press enter. Otherwise please type 'quit'.");
+                if (Console.ReadLine() == "quit")
+                {
+                    break;
+                }
 
             }
             else if (userInput.ToLower() == "p")

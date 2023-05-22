@@ -8,8 +8,18 @@ namespace BankEncapsulation
         }
 
         private double balance = 0.00;
-		internal int Pin { get; set; }
-
+		private int _pin;
+		public int Pin
+		{
+			get
+			{
+				return _pin;
+			}
+			set
+			{
+				_pin = value;
+			}
+		}
 		public bool CheckPin(int pinInput)
 		{
 			if(pinInput == Pin)
